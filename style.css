@@ -1,0 +1,144 @@
+.box{width: 80px;
+    height: 40px;
+    border-radius: 6px ;
+    margin: 40px auto;
+
+}
+
+.box-uno{
+    background-color: green;
+}
+
+.box-dos{background-color: blueviolet;
+    /* transition que es la habilidad principal de las transiciones  */
+
+    /* transition property o transition duranty */
+
+    transition: all 2s ;
+
+}
+
+/* pseudoelementos y pseudoelementos*/
+
+/* Hover :aplica propiedad cuando se posa el mouse sobre elemento */
+
+.box:hover{
+    /* transform es la propiedad principal de las trasnformaciones  */
+    transform: scale(2);
+    background-color: brown;
+    border:1px solid black;
+}
+
+.circle1 , .circle2 , .circle3 , .circle4 , .circle5{
+    height: 40px;
+    width: 40px;
+    margin: 20px ;
+    border-radius:  50px;
+
+}
+
+.circle1{background-color: green ;
+transition: all 2s ease;
+}
+.circle2{background-color: yellow;
+transition: all 2s linear;
+}
+.circle3{background-color: blue;
+transition: all 2s ease-in;
+}
+.circle4{background-color: red;
+transition: all 2s ease-in-out;
+}
+
+.circle5{background-color: greenyellow;
+transition: all 2s ease-out;
+}
+
+.container-circle:hover .circle1,
+.container-circle:hover .circle2,
+.container-circle:hover .circle3,
+.container-circle:hover .circle4,
+.container-circle:hover .circle5{
+    transform: translateX(300px);
+}
+
+.combinado{background-color: chocolate;
+    height:75px ;
+    width: 75px;
+    margin: 50px auto;
+    transition: all 2s ; }
+
+    .combinado:hover{ 
+        transform: rotate(90deg) scale(2) translatex(100px);
+        /* prefijos */
+        -webkit-transform: rotate(90deg) scale(2) translatex(100px);
+
+        -o-transform: rotate(90deg) scale(2) translatex(100px);
+
+        -moz-transform:rotate(90deg) scale(2) translatex(100px)
+
+    }
+
+    .animaciones{
+width:75px ;
+height: 75px;
+margin: 50px auto ;
+background-color: red;
+
+    }
+
+    /* Fotogramas // keyframes  */
+
+    .animaciones:hover{
+/* animation-name: ; 
+animation-duration: ;*/
+
+/* kebah-case // camel-case */
+animation: changecolor 4s;
+animation-iteration-count: infinite;
+
+    }
+/* fotogramas de la animacion  */
+@keyframes changecolor{
+    /* from {
+background-color: indigo ; }
+
+to {background-color: cyan;} */
+
+0%{ background-color: orangered;}
+25%{background-color:orange; width: 100px;height:100px}
+50%{border-radius: 75%;background-color: yellow;}
+100%{background-color: greenyellow; width: 150px;}
+
+}
+
+.linea-uno{
+    width: 24em;
+    margin: 0px auto;
+    border-right: 2px solid rgba(255,255,255,75);
+    text-align:center;
+    font-size:44px;
+/* white-size _ determina como se maneja el espacio en blanco dentro de un elemento */
+    white-space:nowrap;
+    /* hidden , lo que haya fuera del contenedor no se vea ,ni genere un scroll  */
+    overflow: hidden;
+    -ms-transform-origin-y: -50%;
+
+
+}
+
+.animacion-texto{
+animation:texto 8s;
+
+}
+
+@keyframes texto{
+    from{width: 0;
+        border-right-color: rgba(255,255,255,75);
+
+    }
+
+    to{width: 24em;
+border-right-color:transparent ;
+    }
+}
